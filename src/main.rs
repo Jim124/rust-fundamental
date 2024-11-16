@@ -1,5 +1,6 @@
 use closures::test_closures;
 use matches::{test_age, test_struct_match};
+use optiontest::{test_char, test_option_type};
 
 pub mod helper;
 pub mod test_if;
@@ -7,6 +8,7 @@ pub mod test_while;
 pub mod test_for;
 pub mod closures;
 pub mod matches;
+pub mod optiontest;
 fn main() {
     println!("Hello, world!");
     let full_name = helper::get_full_name("Jim", "Du");
@@ -19,4 +21,14 @@ fn main() {
     test_closures();
     test_age();
     test_struct_match();
+    let result = test_option_type();
+    println!("{0}",result.unwrap());
+    let char_result = test_char();
+    if char_result.is_some(){
+        println!("there is a value");
+        println!("the result is {}",char_result.unwrap().to_string() );
+
+    } else {
+        println!("there is no value");
+    }
 }
