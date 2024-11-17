@@ -9,6 +9,7 @@ pub mod test_for;
 pub mod closures;
 pub mod matches;
 pub mod optiontest;
+pub mod structs;
 fn main() {
     println!("Hello, world!");
     let full_name = helper::get_full_name("Jim", "Du");
@@ -31,4 +32,6 @@ fn main() {
     } else {
         println!("there is no value");
     }
+
+    structs::test_create_person();
 }
