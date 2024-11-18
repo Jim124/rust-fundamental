@@ -34,4 +34,7 @@ fn main() {
     }
 
     structs::test_create_person();
+    structs::test_create_customer();
+    structs::test_create_vehicle();
+    structs::test_vehicle_method();
 }
