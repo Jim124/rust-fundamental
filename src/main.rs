@@ -12,6 +12,8 @@ pub mod optiontest;
 pub mod structs;
 pub mod test_trait;
 pub mod myvec;
+pub mod myHashmap;
+pub mod myhashset;
 fn main() {
     println!("Hello, world!");
     let full_name = helper::get_full_name("Jim", "Du");
@@ -35,12 +37,14 @@ fn main() {
         println!("there is no value");
     }
 
-    structs::test_create_person();
-    structs::test_create_customer();
-    structs::test_create_vehicle();
-    structs::test_vehicle_method();
-    test_trait::create_person();
-    myvec::test_vec_init();
-    myvec::test_vec_string();
-    myvec::test_dynamic();
+    // structs::test_create_person();
+    // structs::test_create_customer();
+    // structs::test_create_vehicle();
+    // structs::test_vehicle_method();
+    // test_trait::create_person();
+    // myvec::test_vec_init();
+    // myvec::test_vec_string();
+    // myvec::test_dynamic();
+    myHashmap::test_hashmap();
+   myhashset::test_hashset();
 }
