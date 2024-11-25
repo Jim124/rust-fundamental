@@ -11,6 +11,7 @@ pub mod matches;
 pub mod optiontest;
 pub mod structs;
 pub mod test_trait;
+pub mod myvec;
 fn main() {
     println!("Hello, world!");
     let full_name = helper::get_full_name("Jim", "Du");
@@ -39,4 +40,7 @@ fn main() {
     structs::test_create_vehicle();
     structs::test_vehicle_method();
     test_trait::create_person();
+    myvec::test_vec_init();
+    myvec::test_vec_string();
+    myvec::test_dynamic();
 }
