@@ -14,6 +14,7 @@ pub mod test_trait;
 pub mod myvec;
 pub mod myHashmap;
 pub mod myhashset;
+pub mod myiter;
 fn main() {
     println!("Hello, world!");
     let full_name = helper::get_full_name("Jim", "Du");
@@ -46,5 +47,6 @@ fn main() {
     // myvec::test_vec_string();
     // myvec::test_dynamic();
     myHashmap::test_hashmap();
-   myhashset::test_hashset();
+    myhashset::test_hashset();
+    myiter::test_iterator();
 }
