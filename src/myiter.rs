@@ -38,7 +38,11 @@ pub fn test_iterator(){
   let last_names_string =  last_names.iter().map(|e| String::from(*e));
   let full_names = first_names_string.zip(last_names_string);
   // zip method
-  full_names.for_each(|e| println!("{} {}", e.0,e.1));
+  full_names.clone().for_each(|e| println!("{} {}", e.0,e.1));
+  // enumerate method
+  for (index,value) in full_names.enumerate(){
+    println!("index:{0} value is {1},{2}",index,value.0,value.1 );
+  }
 
 
   // for fruit in fruit_iterator{
