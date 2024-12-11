@@ -31,6 +31,15 @@ pub fn test_iterator(){
   println!("{}",step_by.next().unwrap() );
   // let new_fruit_list_strings = fruit_list.iter().map(String::from);
   
+  let first_names = vec!["Trevor","Shannon","James","Tasha"];
+  let first_names_string = first_names.iter().map(|e|String::from(*e));
+  let last_names = vec!["Jones","Sullivan","Tanner","Redman"];
+
+  let last_names_string =  last_names.iter().map(|e| String::from(*e));
+  let full_names = first_names_string.zip(last_names_string);
+  // zip method
+  full_names.for_each(|e| println!("{} {}", e.0,e.1));
+
 
   // for fruit in fruit_iterator{
   //   println!("{}", fruit);
