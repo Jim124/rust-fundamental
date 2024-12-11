@@ -40,9 +40,11 @@ pub fn test_iterator(){
   // zip method
   full_names.clone().for_each(|e| println!("{} {}", e.0,e.1));
   // enumerate method
-  for (index,value) in full_names.enumerate(){
+  for (index,value) in full_names.clone().enumerate(){
     println!("index:{0} value is {1},{2}",index,value.0,value.1 );
   }
+  // skip method
+  full_names.skip(2).for_each(|e| println!(" Did not skip :{}",e.0));
 
 
   // for fruit in fruit_iterator{
