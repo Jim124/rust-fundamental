@@ -45,7 +45,10 @@ pub fn test_iterator(){
   }
   // skip method
   full_names.skip(2).for_each(|e| println!(" Did not skip :{}",e.0));
-
+ // fold method
+  let foods = vec![("potatoes",20),("strawberries",25),("burgers",30)];
+  let total = foods.iter().fold(0u32, |  a:u32,e| a + e.1);
+  println!("the total is {}",total);
 
   // for fruit in fruit_iterator{
   //   println!("{}", fruit);
