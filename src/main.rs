@@ -55,4 +55,9 @@ fn main() {
     // my_borrow::test_mut_borrow();
     my_date_time::test_duration();
     my_date_time::test_chrono();
+    let r = my_date_time::test_naive_date();
+    match r {
+        Ok(()) => println!("hello"),
+        _ => println!("there is an error" ),
+    }
 }
