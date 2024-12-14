@@ -15,6 +15,8 @@ pub mod myvec;
 pub mod myHashmap;
 pub mod myhashset;
 pub mod myiter;
+pub mod my_borrow;
+pub mod my_date_time;
 fn main() {
     println!("Hello, world!");
     let full_name = helper::get_full_name("Jim", "Du");
@@ -46,7 +48,11 @@ fn main() {
     // myvec::test_vec_init();
     // myvec::test_vec_string();
     // myvec::test_dynamic();
-    myHashmap::test_hashmap();
-    myhashset::test_hashset();
-    myiter::test_iterator();
+    // myHashmap::test_hashmap();
+    // myhashset::test_hashset();
+    // myiter::test_iterator();
+    // my_borrow::test_borrow();
+    // my_borrow::test_mut_borrow();
+    my_date_time::test_duration();
+    my_date_time::test_chrono();
 }
