@@ -17,6 +17,8 @@ pub mod myhashset;
 pub mod myiter;
 pub mod my_borrow;
 pub mod my_date_time;
+pub mod my_thread;
+pub mod my_thread2;
 fn main() {
     println!("Hello, world!");
     let full_name = helper::get_full_name("Jim", "Du");
@@ -53,11 +55,16 @@ fn main() {
     // myiter::test_iterator();
     // my_borrow::test_borrow();
     // my_borrow::test_mut_borrow();
-    my_date_time::test_duration();
-    my_date_time::test_chrono();
-    let r = my_date_time::test_naive_date();
-    match r {
-        Ok(()) => println!("hello"),
-        _ => println!("there is an error" ),
-    }
+    // my_date_time::test_duration();
+    // my_date_time::test_chrono();
+    // let r = my_date_time::test_naive_date();
+    // match r {
+    //     Ok(()) => println!("hello"),
+    //     _ => println!("there is an error" ),
+    // }
+    // my_thread::test_thread();
+    //my_thread::test_spawn();
+    //my_thread2::test_scope_thread();
+    //my_thread2::test_move();
+    my_thread2::test_scope();
 }
