@@ -57,3 +57,12 @@ pub fn test_dynamic(){
 
 
 }
+pub fn test_mut(){
+  let mut v = vec![1,2,3,4];
+  edit_vec(&mut v);
+  println!("{:?}",v);
+
+}
+fn edit_vec( v: &mut Vec<i32>){
+  v.push(5);
+}

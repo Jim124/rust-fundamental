@@ -19,6 +19,8 @@ pub mod my_borrow;
 pub mod my_date_time;
 pub mod my_thread;
 pub mod my_thread2;
+pub mod my_mutex;
+pub mod my_channel;
 fn main() {
     println!("Hello, world!");
     let full_name = helper::get_full_name("Jim", "Du");
@@ -66,5 +68,9 @@ fn main() {
     //my_thread::test_spawn();
     //my_thread2::test_scope_thread();
     //my_thread2::test_move();
-    my_thread2::test_scope();
+    // my_thread2::test_scope();
+    // my_mutex::test_mutex();
+   // my_mutex::test_mutex_closure();
+    my_channel::test_message();
+    
 }
