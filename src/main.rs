@@ -1,6 +1,7 @@
 use closures::test_closures;
 use matches::{test_age, test_struct_match};
 use optiontest::{test_char, test_option_type};
+use uuid::Uuid;
 
 pub mod helper;
 pub mod test_if;
@@ -21,6 +22,7 @@ pub mod my_thread;
 pub mod my_thread2;
 pub mod my_mutex;
 pub mod my_channel;
+pub mod myargs;
 fn main() {
     println!("Hello, world!");
     let full_name = helper::get_full_name("Jim", "Du");
@@ -71,6 +73,8 @@ fn main() {
     // my_thread2::test_scope();
     // my_mutex::test_mutex();
    // my_mutex::test_mutex_closure();
-    my_channel::test_message();
-    
+    //my_channel::test_message();
+    let id = Uuid::new_v4();
+    println!("{}",id.to_string());
+    myargs::test_args();
 }

@@ -8,6 +8,9 @@ pub fn test_hashmap(){
   stock_list.insert("appl".to_string(), 233.22);
   stock_list.insert("amsc".to_string(),50.78 );
   stock_list.insert("appl".to_string(),236.66);
+  // get method
+  let appl = stock_list.get(&"appl".to_string()).copied().unwrap();
+  println!("{}",appl );
   println!("{:#?}",stock_list );
   stock_list.remove(&("appl".to_string()));
   println!("{:#?}",stock_list );
